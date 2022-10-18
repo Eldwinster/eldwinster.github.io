@@ -12,6 +12,7 @@
 
 ;; Install dependencies
 (package-install 'htmlize)
+(package-install 'org-roam)
 
 ;; Load the publishing system
 (require 'ox-publish)
@@ -25,16 +26,22 @@
 ;; Define the publishing project
 (setq org-publish-project-alist
       '(
-        (list "org-site:main"
-              :recursive t
-             :base-directory "./www"
-             :publishing-function 'org-html-publish-to-html
-             :publishing-directory "./public"
-             :with-author nil           ;; Don't include author name
-             :with-creator t            ;; Include Emacs and Org versions in footer
-             :with-toc t                ;; Include a table of contents
-             :section-numbers nil       ;; Don't include section numbers
-             :time-stamp-file nil)))    ;; Don't include time stamp in file
+        ("org-notes"
+         :base-directory "./www"
+         :base-extension "html"
+         :publishing-directory "./public"
+         :recursive t
+         :publishing-function org-publish-attachment
+         :auto-preamble t)
+        ("org-static"
+         :base-directory "./www/media"
+         :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf"
+         :publishing-directory "./public/media"
+         :recursive t
+         :publishing-function org-publish-attachment
+         )
+        ("org" :components ("org-notes" "org-static"))
+        ))
 
 ;; Generate the site output
 (org-publish-all t)
