@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2022-10-20 Thu 03:27 -->
+<!-- 2022-10-20 Thu 02:05 -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Index</title>
+<title>Pickle Rick</title>
 <meta name="generator" content="org mode" />
 <meta name="theme-color" content="#77aa99" />
 <meta property="og:type" content="article" />
-<meta property="og:title" content="Index" />
+<meta property="og:title" content="Pickle Rick" />
 <meta property="og:image" content="https://tecosaur.com/resources/org/nib.png" />
 <meta property="og:image:type" content="image/png" />
 <meta property="og:image:width" content="200" />
 <meta property="og:image:height" content="200" />
 <meta property="og:image:alt" content="Green fountain pen nib" />
-<meta property="og:article:published_time" content="2022-10-20T03:09:11+0200" />
-<meta property="og:article:modified_time" content="2022-10-20T03:09:11+0200" />
+<meta property="og:article:published_time" content="2022-10-20T01:10:46+0200" />
+<meta property="og:article:modified_time" content="2022-10-20T01:10:46+0200" />
 <link rel="icon" href="https://tecosaur.com/resources/org/nib.ico" type="image/ico" />
 
 <link rel="preload" as="font" crossorigin="anonymous" type="font/woff2" href="https://tecosaur.com/resources/org/etbookot-roman-webfont.woff2">
@@ -74,83 +74,563 @@ window.addEventListener('DOMContentLoaded', () => {
 <input type='checkbox' id='theme-switch'><div id='page'><label id='switch-label' for='theme-switch'></label><div id="content">
 <header class="page-header"><div class="page-meta">, </div>
 
-<h1 class="title">Index</h1>
+<h1 class="title">Pickle Rick</h1>
 </header><nav id="table-of-contents">
 <h2><a href="#" style="color:inherit; text-decoration: none;">Table of Contents</a></h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org6c1643e">1. Hello World!</a></li>
+<li><a href="#orgb436184">1. Pickle Rick</a>
+<ul>
+<li><a href="#orgc1c5460">1.1. Report</a>
+<ul>
+<li><a href="#orga3b0e96">1.1.1. Technologies</a></li>
+<li><a href="#org767df0e">1.1.2. Port and service enumeration</a></li>
+<li><a href="#orgc8e7c54">1.1.3. Web enumeration</a></li>
+<li><a href="#org5bf7d7f">1.1.4. Exploit</a></li>
+</ul>
+</li>
+<li><a href="#org0025656">1.2. Questions</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </nav>
 <dl class="org-dl">
-<dt>references</dt><dd></dd>
+<dt>keywords</dt><dd><a href="blog-tryhackme_box_reports-20221019162224.html#ID-0492f03d-bb39-47dc-8e7b-52f8d994b3a6">TryHackMe box reports</a>,</dd>
+<dt>references</dt><dd>(“TryHackMe | Pickle Rick” n.d.), <a href="&amp;TryHackMePickleRick">&amp;TryHackMePickleRick</a>,</dd>
 </dl>
 
-<nav id="org52793e6">
-<p>
-<a href="blog-3615_my_life-20221019154523.html#ID-b714f6dd-4380-4f3e-a57c-871efffd7fd8">3615 my life</a>, <a href="blog-write_ups-20221019162118.html#ID-4886dd10-d0e2-4e22-882d-0b56f520ca74">Write ups</a>
-</p>
-</nav>
-
-
-<div id="outline-container-org6c1643e" class="outline-2">
-<h2 id="org6c1643e"><span class="section-number-2">1.</span> Hello World!</h2>
+<div id="outline-container-orgb436184" class="outline-2">
+<h2 id="orgb436184"><span class="section-number-2">1.</span> Pickle Rick</h2>
 <div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-orgc1c5460" class="outline-3">
+<h3 id="orgc1c5460"><span class="section-number-3">1.1.</span> Report</h3>
+<div class="outline-text-3" id="text-1-1">
+</div>
+<div id="outline-container-orga3b0e96" class="outline-4">
+<h4 id="orga3b0e96"><span class="section-number-4">1.1.1.</span> Technologies</h4>
+<div class="outline-text-4" id="text-1-1-1">
+<p>
+According to the room:
+</p>
+<blockquote>
+<p>
+This Rick and Morty themed challenge requires you to exploit a web server to find 3 ingredients that will help Rick make his potion to transform himself back into a human from a pickle.
+</p>
 
-<figure id="org12c6158">
-<img src="media/screenshot/darkSoulPraiseTheSun01.jpg" alt="darkSoulPraiseTheSun01.jpg">
+<p>
+Deploy the virtual machine on this task and explore the web application: 10.10.17.158
+</p>
+
+<p>
+You can also access the web app using the following link: <a href="https://10-10-17-158.p.thmlabs.com">https://10-10-17-158.p.thmlabs.com</a> (this will update when the machine has fully started)
+</p>
+</blockquote>
+
+<p>
+So going at the given URL we get to the index page of the application.
+</p>
+
+
+<figure id="orgc458db8">
+<img src="media/screenshot/pickleRickIndexPage.jpeg" alt="pickleRickIndexPage.jpeg">
 
 </figure>
 
 <p>
-Phew, that was a hell of fight to arrive where I here.
+Which can be scary at first. There is nothing, literally..
 </p>
 
 <p>
-Oh.. Hi there ! I didn&rsquo;t see that I wasn&rsquo;t alone here. Well, I don&rsquo;t know what
-bring you here. Though, as anyone else I welcome you in my humble abode.
+However, don&rsquo;t be afraid !
 </p>
 
 <p>
-The golden age of piracy might have ended a couple of centuries ago. However,
-today our digital based society might enter in a new kind of golden age of
-piracy.
+First let&rsquo;s check Wappalyser:
+</p>
+
+
+<figure id="orgb31f0c0">
+<img src="media/screenshot/pickleRickWappalyser.jpeg" alt="pickleRickWappalyser.jpeg">
+
+</figure>
+
+<p>
+Ok so we now know that the server is a Nginx server which is running on Ubuntu.
+It&rsquo;s not much but that still something.
+</p>
+
+<ul class="org-ul">
+<li><p>
+<b>NOTE</b>
+</p>
+<details id="org4aa88be">
+<summary id="orgb99882f">
+<p>
+Spoiler
+</p>
+</summary>
+<p>
+Just an afterthought remark, note that on the above screenshot we don&rsquo;t know
+the back-end is running on which programming language. So this is not reliable
+because you will see that after I access a certain page, the back-end will
+manifest itself.
+I presume that the reason is due to wappalyser needing to interact with said technologies.
+</p>
+</details></li>
+</ul>
+
+<p>
+Secondly, let&rsquo;s give a look at the source code of the page
+</p>
+
+<details id="org85967be">
+
+<figure id="org99b0159">
+<img src="media/screenshot/pickleRickUsername.jpeg" alt="pickleRickUsername.jpeg">
+
+</figure>
+</details>
+
+<p>
+Good that give us a username <code>R1ckRul3s</code>, let keep it and continue our investigation.
 </p>
 
 <p>
-This time people might not fight at sea, cannoning at each other in hope to get
-gold, jewelries and anything that&rsquo;s might be precious.
+That&rsquo;s conclude what we can do from the web app, now we will use some tool to
+dive deeper under the hood.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org767df0e" class="outline-4">
+<h4 id="org767df0e"><span class="section-number-4">1.1.2.</span> Port and service enumeration</h4>
+<div class="outline-text-4" id="text-1-1-2">
+<p>
+The first reflex is to launch some port and service scan like nmap.
+</p>
+
+<details id='org27fae6c' class='code' open><summary><span class="lang">Shell Script</span></summary>
+    <div class='gutter'>
+    <a href='#org27fae6c'>#</a>
+    <button title='Copy to clipboard' onclick='copyPreToClipbord(this)'>⎘</button>    </div>
+    <div class="org-src-container">
+<pre class="src src-shell">nmap -vvv -sC -sV -A -p- <span class="org-string">"</span><span class="org-string"><span class="org-constant">$</span></span><span class="org-string"><span class="org-variable-name">{ip}</span></span><span class="org-string">"</span> -oG <span class="org-string">"</span><span class="org-string"><span class="org-constant">$</span></span><span class="org-string"><span class="org-variable-name">{file}</span></span><span class="org-string">"</span>
+</pre>
+</div>
+    </details>
+
+<p>
+-vvv: gives more verbose
 </p>
 
 <p>
-No, today&rsquo;s confrontation are more insidious without any fireworks but as
-devastating as it could be.
+-sC: scan with default NSE scripts
 </p>
 
 <p>
-Today&rsquo;s gold, is Data, with a capital &ldquo;D&rdquo; as anything related to someone or
-something might be invaluable.
+-sV: attempts to determine the version of the service running on port
 </p>
 
 <p>
-And here I am, as some kind of matelot ready to embark on some legendary ship
-to navigate the seven seas with my crew. Well, for now I don&rsquo;t have any ship nor
-any crew member, like any beginning of journey, I suppose..
+-A: do an extensive scan on these ports
 </p>
 
 <p>
-Take this as my diary&rsquo;s journey.
+-p-: scan all the ports
+</p>
+
+<details id="org4be99a3">
+<p>
+<a href="ref/files/tryhackme/pickleRick/nmap_report_10-10-17-158.p.thmlabs.com_2022-10-14T22:25:12.txt">ref/files/tryhackme/pickleRick/nmap_report_10-10-17-158.p.thmlabs.com_2022-10-14T22:25:12.txt</a>
+</p>
+</details>
+
+<p>
+Here we have two service running:
+</p>
+<ul class="org-ul">
+<li>ssh on port: 22</li>
+<li>http on port: 80</li>
+</ul>
+
+<p>
+At first, I tried to connect to the server via ssh to see if there is the
+possibility with hydra to brute force the credential. Tough luck!  The
+authentication needs a private key..
 </p>
 
 <p>
-I hope you&rsquo;ll find the journey as entertaining as I was, am, and will.
+So weed need to focus our effort on the service running on port 80 which is our
+web app.
 </p>
+
+<p>
+So I proceed with using gobuster to enumerate hidden files or directories.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc8e7c54" class="outline-4">
+<h4 id="orgc8e7c54"><span class="section-number-4">1.1.3.</span> Web enumeration</h4>
+<div class="outline-text-4" id="text-1-1-3">
+<p>
+As said, we need to look if there is any hidden page running on the server.
+Let&rsquo;s use the dir mode on gobuster and enumerate directories and files.
+</p>
+
+<details id='orga7d6cc9' class='code' open><summary><span class="lang">Shell Script</span></summary>
+    <div class='gutter'>
+    <a href='#orga7d6cc9'>#</a>
+    <button title='Copy to clipboard' onclick='copyPreToClipbord(this)'>⎘</button>    </div>
+    <div class="org-src-container">
+<pre class="src src-shell">gobuster dir -q -t <span class="org-highlight-numbers-number">64</span><span class="org-sh-escaped-newline">\</span>
+    -x php,sh,txt,cgi,html,css,js,py,jpg,jpeg,png,gif <span class="org-sh-escaped-newline">\</span>
+    -u <span class="org-string">"</span><span class="org-string"><span class="org-constant">$</span></span><span class="org-string"><span class="org-variable-name">{url}</span></span><span class="org-string">"</span> <span class="org-sh-escaped-newline">\</span>
+    -w <span class="org-string">"</span><span class="org-string"><span class="org-constant">$</span></span><span class="org-string"><span class="org-variable-name">{directory_wordlist}</span></span><span class="org-string">"</span> <span class="org-sh-escaped-newline">\</span>
+    -o <span class="org-string">"</span><span class="org-string"><span class="org-constant">$</span></span><span class="org-string"><span class="org-variable-name">{file}</span></span><span class="org-string">"</span>
+</pre>
+</div>
+    </details>
+
+<p>
+Let&rsquo;s break the command down:
+</p>
+<ul class="org-ul">
+<li><code>-q</code>: don&rsquo;t print the banner and other noise (because I use the -o flag)</li>
+<li><code>-t</code>: number of concurrent threads</li>
+<li><code>-x</code>: File extension to search fo</li>
+<li><code>-u</code>: the target url</li>
+<li><code>-w</code>: path to the wordlist</li>
+<li><code>-o</code>: output file to write results to</li>
+</ul>
+
+<details id="org35d720f">
+<p>
+<a href="ref/files/tryhackme/pickleRick/gobuster_report_10-10-17-158.p.thmlabs.com_2022-10-14T22:25:12.txt">ref/files/tryhackme/pickleRick/gobuster_report_10-10-17-158.p.thmlabs.com_2022-10-14T22:25:12.txt</a>
+</p>
+</details>
+
+<p>
+Here we are finally we found some interesting stuff here.
+</p>
+
+<p>
+More precisely we found a login.php page and a robots.txt file.
+</p>
+
+<p>
+The login page we let us use the username we found. Problem is we don&rsquo;t have any
+password.
+</p>
+
+<p>
+Let&rsquo;s check the robots.txt file and see if we are lucky:
+</p>
+
+<ul class="org-ul">
+<li><p>
+robots.txt
+</p>
+<details id="orgbb4adb6">
+<summary id="orgd6cf512">
+<p>
+Spoiler
+</p>
+</summary>
+
+<figure id="org28ad5ad">
+<img src="media/screenshot/pickleRickPassword.jpeg" alt="pickleRickPassword.jpeg">
+
+</figure>
+</details></li>
+</ul>
+
+<p>
+We find a word, which apparently is some <a href="https://rickandmorty.fandom.com/wiki/Wubba_Lubba_dub-dub">reference</a> to the show, perhaps that&rsquo;s
+our password..
+</p>
+
+<p>
+Success, we have access to the Rick Portal.
+</p>
+
+
+<figure id="org3c3cb96">
+<img src="media/screenshot/pickleRickCommandPanel.jpeg" alt="pickleRickCommandPanel.jpeg">
+
+</figure>
+
+<p>
+Except for this page we can&rsquo;t access the other page, but that&rsquo;s not important
+because we have something that look like a web shell where we can input commands.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5bf7d7f" class="outline-4">
+<h4 id="org5bf7d7f"><span class="section-number-4">1.1.4.</span> Exploit</h4>
+<div class="outline-text-4" id="text-1-1-4">
+<p>
+First, let&rsquo;s use something simple like a ls command.
+</p>
+
+
+<figure id="org85cd6b5">
+<img src="media/screenshot/pickleRickCommandPanelLsResult.jpeg" alt="pickleRickCommandPanelLsResult.jpeg">
+
+</figure>
+
+<p>
+Cool we found our first ingredient. We just need to use the URL followed by the
+name of the file.
+</p>
+
+<details id='org2ecf338' class='code' open>
+    <summary></summary>
+    <div class='gutter'>    <a href='#org2ecf338'>#</a>
+    <button title='Copy to clipboard' onclick='copyPreToClipbord(this)'>⎘</button>    </div>
+    <pre class="example">
+http://10.10.17.158/Sup3rS3cretPickl3Ingred.txt
+</pre>
+
+    </details>
+
+
+<details id="orgd946c42">
+<summary id="org0c8b158">
+<p>
+Spoiler
+</p>
+</summary>
+
+<figure id="orgc3aaccb">
+<img src="media/screenshot/pickleRickFirstIngredient.jpeg" alt="pickleRickFirstIngredient.jpeg">
+
+</figure>
+</details>
+
+<p>
+Looking at the result of our ls command we find another interesting file:
+clue.txt
+</p>
+
+
+<figure id="org2b164f0">
+<img src="media/screenshot/pickleRickClue.jpeg" alt="pickleRickClue.jpeg">
+
+</figure>
+
+<p>
+So let&rsquo;s just do what it says.
+</p>
+
+<p>
+First, we check the home directories and found a rick user, which is interesting
+because that&rsquo;s precisely who we need to help.
+</p>
+
+
+<figure id="org29abccc">
+<img src="media/screenshot/pickleRickCommandPanelLsHomeRickResult.jpeg" alt="pickleRickCommandPanelLsHomeRickResult.jpeg">
+
+</figure>
+
+<p>
+Bingo, we found the second file. However, we have so problem here:
+</p>
+
+
+<figure id="org185c8e2">
+<img src="media/screenshot/pickleRickCommandDisabled.jpeg" alt="pickleRickCommandDisabled.jpeg">
+
+</figure>
+
+<p>
+We can&rsquo;t use the cat command. No problem, just use the less command
+so running,
+</p>
+
+<details id='orge0a8b94' class='code' open>
+    <summary></summary>
+    <div class='gutter'>    <a href='#orge0a8b94'>#</a>
+    <button title='Copy to clipboard' onclick='copyPreToClipbord(this)'>⎘</button>    </div>
+    <pre class="example">
+less '/home/rick/second ingredients'
+</pre>
+
+    </details>
+
+
+<p>
+We got as a result:
+</p>
+
+<details id="org50e4348">
+<summary id="org1155859">
+<p>
+Spoiler
+</p>
+</summary>
+
+<figure id="org90e1936">
+<img src="media/screenshot/pickleRickSecondIngredient.jpeg" alt="pickleRickSecondIngredient.jpeg">
+
+</figure>
+</details>
+
+<p>
+Second place of interest is the root directory of course.
+</p>
+
+<p>
+Using ls on the root directory return nothing.. Seems like we need sudo
+privileges.
+</p>
+
+<details id='orgb3e7120' class='code' open>
+    <summary></summary>
+    <div class='gutter'>    <a href='#orgb3e7120'>#</a>
+    <button title='Copy to clipboard' onclick='copyPreToClipbord(this)'>⎘</button>    </div>
+    <pre class="example">
+sudo -l
+</pre>
+
+    </details>
+
+
+
+<figure id="org417ed33">
+<img src="media/screenshot/pickleRickSudoPrivilege.jpeg" alt="pickleRickSudoPrivilege.jpeg">
+
+</figure>
+
+<p>
+Good, now let&rsquo;s run our command to get the third ingredient.
+</p>
+
+<details id='org482897e' class='code' open>
+    <summary></summary>
+    <div class='gutter'>    <a href='#org482897e'>#</a>
+    <button title='Copy to clipboard' onclick='copyPreToClipbord(this)'>⎘</button>    </div>
+    <pre class="example">
+sudo ls /root
+</pre>
+
+    </details>
+
+
+
+<figure id="orgec7309b">
+<img src="media/screenshot/pickleRickCommandPanelLsRootResult.jpeg" alt="pickleRickCommandPanelLsRootResult.jpeg">
+
+</figure>
+
+<details id='org849f452' class='code' open>
+    <summary></summary>
+    <div class='gutter'>    <a href='#org849f452'>#</a>
+    <button title='Copy to clipboard' onclick='copyPreToClipbord(this)'>⎘</button>    </div>
+    <pre class="example">
+sudo less /root/3rd.txt
+</pre>
+
+    </details>
+
+
+<ul class="org-ul">
+<li><p>
+test
+</p>
+<details id="org97b9448">
+<summary id="org80b9ceb">
+<p>
+Spoiler
+</p>
+</summary>
+
+<figure id="orgde42688">
+<img src="media/screenshot/pickleRickThirdIngredient.jpeg" alt="pickleRickThirdIngredient.jpeg">
+
+</figure>
+</details></li>
+</ul>
+
+<p>
+Which conclude this CTF.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org0025656" class="outline-3">
+<h3 id="org0025656"><span class="section-number-3">1.2.</span> Questions</h3>
+<div class="outline-text-3" id="text-1-2">
+<ol class="org-ol">
+<li><p>
+What is the first ingredient Rick needs?
+</p>
+<details id="org7895e62">
+<summary id="orgbc453b7">
+<p>
+Answer
+</p>
+</summary>
+<details id='org0db594d' class='code' open>
+    <summary></summary>
+    <div class='gutter'>    <a href='#org0db594d'>#</a>
+    <button title='Copy to clipboard' onclick='copyPreToClipbord(this)'>⎘</button>    </div>
+    <pre class="example">
+mr. meeseek hair
+</pre>
+
+    </details>
+</details></li>
+<li><p>
+Whats the second ingredient Rick needs?
+</p>
+<details id="org2ec2440">
+<summary id="org0cb6bd6">
+<p>
+Answer
+</p>
+</summary>
+<details id='org428569e' class='code' open>
+    <summary></summary>
+    <div class='gutter'>    <a href='#org428569e'>#</a>
+    <button title='Copy to clipboard' onclick='copyPreToClipbord(this)'>⎘</button>    </div>
+    <pre class="example">
+1 jerry tear
+</pre>
+
+    </details>
+</details></li>
+<li><p>
+Whats the final ingredient Rick needs?
+</p>
+<details id="org8b3ddd2">
+<summary id="org907183c">
+<p>
+Answer
+</p>
+</summary>
+<details id='org4dcc7fe' class='code' open>
+    <summary></summary>
+    <div class='gutter'>    <a href='#org4dcc7fe'>#</a>
+    <button title='Copy to clipboard' onclick='copyPreToClipbord(this)'>⎘</button>    </div>
+    <pre class="example">
+fleeb juice
+</pre>
+
+    </details>
+</details></li>
+</ol>
+</div>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="date">Created: 2022-10-20 Thu 03:27</p>
+<p class="date">Created: 2022-10-20 Thu 02:05</p>
 </div>
 </div>
 </body>
