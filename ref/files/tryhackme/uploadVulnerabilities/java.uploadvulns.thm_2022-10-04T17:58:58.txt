@@ -1,0 +1,2 @@
+/images               [Size: 329] [--> http://java.uploadvulns.thm/images/]
+/assets               [Size: 329] [--> http://java.uploadvulns.thm/assets/]

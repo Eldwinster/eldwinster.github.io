@@ -1,0 +1,2 @@
+/graphics             [Size: 333] [--> http://magic.uploadvulns.thm/graphics/]
+/assets               [Size: 331] [--> http://magic.uploadvulns.thm/assets/]

@@ -1,0 +1,7 @@
+/index.html           [Size: 1062]
+/login.php            [Size: 882]
+/assets               [Size: 341] [--> http://10-10-17-158.p.thmlabs.com/assets/]
+/portal.php           [Size: 0] [--> /login.php]
+/robots.txt           [Size: 17]
+/denied.php           [Size: 0] [--> /login.php]
+/server-status        [Size: 314]

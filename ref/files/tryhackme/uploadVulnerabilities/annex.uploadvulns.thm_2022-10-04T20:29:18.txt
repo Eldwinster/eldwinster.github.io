@@ -1,0 +1,2 @@
+/privacy              [Size: 332] [--> http://annex.uploadvulns.thm/privacy/]
+/assets               [Size: 331] [--> http://annex.uploadvulns.thm/assets/]

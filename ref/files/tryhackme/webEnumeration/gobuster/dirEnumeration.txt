@@ -1,0 +1,6 @@
+/images               (Status: 301) [Size: 313] [--> http://10.10.16.239/images/]
+/public               (Status: 301) [Size: 313] [--> http://10.10.16.239/public/]
+/css                  (Status: 301) [Size: 310] [--> http://10.10.16.239/css/]
+/js                   (Status: 301) [Size: 309] [--> http://10.10.16.239/js/]
+/Changes              (Status: 301) [Size: 314] [--> http://10.10.16.239/Changes/]
+/VIDEO                (Status: 301) [Size: 312] [--> http://10.10.16.239/VIDEO/]

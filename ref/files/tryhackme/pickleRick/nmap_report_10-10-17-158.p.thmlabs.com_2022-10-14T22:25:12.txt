@@ -1,0 +1,5 @@
+# Nmap 7.92 scan initiated Fri Oct 14 22:25:13 2022 as: nmap -vvv -T4 -sC -sV -A -p- -oG /home/yann/org/ref/files/tryhackme/pickleRick/nmap_report_10-10-17-158.p.thmlabs.com_2022-10-14T22:25:12.txt 10.10.17.158
+# Ports scanned: TCP(65535;1-65535) UDP(0;) SCTP(0;) PROTOCOLS(0;)
+Host: 10.10.17.158 ()	Status: Up
+Host: 10.10.17.158 ()	Ports: 22/open/tcp//ssh//OpenSSH 7.2p2 Ubuntu 4ubuntu2.6 (Ubuntu Linux; protocol 2.0)/, 80/open/tcp//http//Apache httpd 2.4.18 ((Ubuntu))/	Ignored State: closed (65533)
+# Nmap done at Fri Oct 14 22:25:51 2022 -- 1 IP address (1 host up) scanned in 38.27 seconds
