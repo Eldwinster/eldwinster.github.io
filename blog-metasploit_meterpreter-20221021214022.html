@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2022-10-22 Sat 01:46 -->
+<!-- 2022-10-21 Fri 21:43 -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>TryHackMe box reports</title>
+<title>Metasploit: Meterpreter</title>
 <meta name="generator" content="org mode" />
 <meta name="theme-color" content="#77aa99" />
 <meta property="og:type" content="article" />
-<meta property="og:title" content="TryHackMe box reports" />
+<meta property="og:title" content="Metasploit: Meterpreter" />
 <meta property="og:image" content="https://tecosaur.com/resources/org/nib.png" />
 <meta property="og:image:type" content="image/png" />
 <meta property="og:image:width" content="200" />
 <meta property="og:image:height" content="200" />
 <meta property="og:image:alt" content="Green fountain pen nib" />
-<meta property="og:article:published_time" content="2022-10-22T01:46:14+0200" />
-<meta property="og:article:modified_time" content="2022-10-22T01:46:14+0200" />
+<meta property="og:article:published_time" content="2022-10-21T21:42:40+0200" />
+<meta property="og:article:modified_time" content="2022-10-21T21:42:40+0200" />
 <link rel="icon" href="https://tecosaur.com/resources/org/nib.ico" type="image/ico" />
 
 <link rel="preload" as="font" crossorigin="anonymous" type="font/woff2" href="https://tecosaur.com/resources/org/etbookot-roman-webfont.woff2">
@@ -74,46 +74,305 @@ window.addEventListener('DOMContentLoaded', () => {
 <input type='checkbox' id='theme-switch'><div id='page'><label id='switch-label' for='theme-switch'></label><div id="content">
 <header class="page-header"><div class="page-meta">, </div>
 
-<h1 class="title">TryHackMe box reports</h1>
+<h1 class="title">Metasploit: Meterpreter</h1>
 </header><nav id="table-of-contents">
 <h2><a href="#" style="color:inherit; text-decoration: none;">Table of Contents</a></h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgb8ba3c2">1. TryHackMe Walkthrough</a></li>
-<li><a href="#orga478223">2. TryHackMe Capture The Flag</a></li>
-<li><a href="#org353d8bf">3. Learn More</a></li>
+<li><a href="#orge42a2f3">1. Metasploit: Meterpreter</a></li>
+<li><a href="#org5a2a8b6">2. Learn More</a></li>
 </ul>
 </div>
 </nav>
 <dl class="org-dl">
-<dt>keywords</dt><dd><a href="blog-write_ups-20221019162118.html#ID-4886dd10-d0e2-4e22-882d-0b56f520ca74">Write ups</a>,</dd>
-<dt>references</dt><dd></dd>
+<dt>keywords</dt><dd><a href="blog-tryhackme_box_reports-20221019162224.html#ID-0492f03d-bb39-47dc-8e7b-52f8d994b3a6">TryHackMe box reports</a>,</dd>
+<dt>references</dt><dd>(“TryHackMe | Metasploit: Meterpreter” n.d.),</dd>
 </dl>
 
-<div id="outline-container-orgb8ba3c2" class="outline-2">
-<h2 id="orgb8ba3c2"><span class="section-number-2">1.</span> TryHackMe Walkthrough</h2>
+<div id="outline-container-orge42a2f3" class="outline-2">
+<h2 id="orge42a2f3"><span class="section-number-2">1.</span> Metasploit: Meterpreter</h2>
 <div class="outline-text-2" id="text-1">
-<ul class="org-ul">
-<li><a href="blog-metasploit_exploitation-20221021213030.html#ID-03c286e7-bbf6-48ac-be91-98b361a09e52">Metasploit: Exploitation</a></li>
-<li><a href="blog-metasploit_meterpreter-20221021214022.html#ID-92cc66e7-6358-41f9-b027-a01c782f8ea2">Metasploit: Meterpreter</a></li>
-<li><a href="blog-blue-20221022014522.html#ID-28fbe72f-33eb-4361-8e08-01aeb573e857">Blue</a></li>
-</ul>
+<blockquote>
+<p>
+You can use the credentials below to simulate an initial compromise over SMB (Server Message Block) (using exploit/windows/smb/psexec)
+</p>
+
+<p>
+Username: ballen
+</p>
+
+<p>
+Password: Password1
+</p>
+</blockquote>
+
+<ol class="org-ol">
+<li>What is the computer name?
+<ol class="org-ol">
+<li>set psexec options
+<img src="media/screenshot/metasploitMeterpreterPsexecOptions.jpeg" alt="metasploitMeterpreterPsexecOptions.jpeg"></li>
+<li>run the exploit</li>
+<li><p>
+run help to find the right tool to use
+</p>
+<details id="org9c95a1b">
+<summary id="orge597ceb">
+<p>
+Answer
+</p>
+</summary>
+
+<figure id="orge35b258">
+<img src="media/screenshot/metasploitMeterpreterSysinfo.jpeg" alt="metasploitMeterpreterSysinfo.jpeg">
+
+</figure>
+<details id='orgda26995' class='code' open>
+    <summary></summary>
+    <div class='gutter'>    <a href='#orgda26995'>#</a>
+    <button title='Copy to clipboard' onclick='copyPreToClipbord(this)'>⎘</button>    </div>
+    <pre class="example">
+ACME-TEST
+</pre>
+
+    </details>
+</details></li>
+</ol></li>
+<li><p>
+What is the target domain?
+<img src="media/screenshot/metasploitMeterpreterEnumDomainOptions.jpeg" alt="metasploitMeterpreterEnumDomainOptions.jpeg">
+</p>
+<details id="orgda207e6">
+<summary id="orgefedf29">
+<p>
+Answer
+</p>
+</summary>
+
+<figure id="orgabeb20a">
+<img src="media/screenshot/metasploitMeterpreterEnumDomain.jpeg" alt="metasploitMeterpreterEnumDomain.jpeg">
+
+</figure>
+<details id='org97acebb' class='code' open>
+    <summary></summary>
+    <div class='gutter'>    <a href='#org97acebb'>#</a>
+    <button title='Copy to clipboard' onclick='copyPreToClipbord(this)'>⎘</button>    </div>
+    <pre class="example">
+flash
+</pre>
+
+    </details>
+</details></li>
+<li><p>
+What is the name of the share likely created by the user?
+<img src="media/screenshot/metasploitMeterpreterEnumSharesOptions.jpeg" alt="metasploitMeterpreterEnumSharesOptions.jpeg">
+</p>
+<details id="org4b2f75e">
+<summary id="org3bc50dc">
+<p>
+Answer
+</p>
+</summary>
+
+<figure id="orgcc42ef0">
+<img src="media/screenshot/metasploitMeterpreterEnumShares.jpeg" alt="metasploitMeterpreterEnumShares.jpeg">
+
+</figure>
+<details id='org76ef343' class='code' open>
+    <summary></summary>
+    <div class='gutter'>    <a href='#org76ef343'>#</a>
+    <button title='Copy to clipboard' onclick='copyPreToClipbord(this)'>⎘</button>    </div>
+    <pre class="example">
+speedster
+</pre>
+
+    </details>
+</details></li>
+<li><p>
+What is the NTLM hash of the jchambers user?
+<img src="media/screenshot/metasploitMeterpreterHashdumpOptions.jpeg" alt="metasploitMeterpreterHashdumpOptions.jpeg">
+</p>
+<details id="org028179f">
+<summary id="orge7afecd">
+<p>
+Answer
+</p>
+</summary>
+
+<figure id="orgc83366a">
+<img src="media/screenshot/metasploitMeterpreterHashdump.jpeg" alt="metasploitMeterpreterHashdump.jpeg">
+
+</figure>
+<details id='org560d58a' class='code' open>
+    <summary></summary>
+    <div class='gutter'>    <a href='#org560d58a'>#</a>
+    <button title='Copy to clipboard' onclick='copyPreToClipbord(this)'>⎘</button>    </div>
+    <pre class="example">
+69596c7aa1e8daee17f8e78870e25a5c
+</pre>
+
+    </details>
+</details></li>
+<li>What is the cleartext password of the jchambers user?
+<ol class="org-ol">
+<li><p>
+create a hash file for john the ripper
+</p>
+<details id='org9703c31' class='code' open>
+    <summary></summary>
+    <div class='gutter'>    <a href='#org9703c31'>#</a>
+    <button title='Copy to clipboard' onclick='copyPreToClipbord(this)'>⎘</button>    </div>
+    <pre class="example">
+echo "jchambers:69596c7aa1e8daee17f8e78870e25a5c" &gt; hash.txt
+</pre>
+
+    </details></li>
+<li><p>
+run john
+</p>
+<details id='org7995b0e' class='code' open>
+    <summary></summary>
+    <div class='gutter'>    <a href='#org7995b0e'>#</a>
+    <button title='Copy to clipboard' onclick='copyPreToClipbord(this)'>⎘</button>    </div>
+    <pre class="example">
+john --format=nt --wordlist=/usr/share/wordlists/passwords/rockyou.txt hash.txt
+</pre>
+
+    </details></li>
+<li><p>
+get the password
+</p>
+<details id="orgc329838">
+<summary id="org21292bd">
+<p>
+Answer
+</p>
+</summary>
+<details id='orgba3df7a' class='code' open>
+    <summary></summary>
+    <div class='gutter'>    <a href='#orgba3df7a'>#</a>
+    <button title='Copy to clipboard' onclick='copyPreToClipbord(this)'>⎘</button>    </div>
+    <pre class="example">
+Trustno1
+</pre>
+
+    </details>
+</details></li>
+</ol></li>
+<li><p>
+Where is the &ldquo;secrets.txt&rdquo;  file located?
+</p>
+<details id="org27a85e4">
+<summary id="org1d88ec0">
+<p>
+Answer
+</p>
+</summary>
+
+<figure id="org58bf9ea">
+<img src="media/screenshot/metasploitMeterpreterSecreFilePath.jpeg" alt="metasploitMeterpreterSecreFilePath.jpeg">
+
+</figure>
+
+<details id='org1767b45' class='code' open>
+    <summary></summary>
+    <div class='gutter'>    <a href='#org1767b45'>#</a>
+    <button title='Copy to clipboard' onclick='copyPreToClipbord(this)'>⎘</button>    </div>
+    <pre class="example">
+c:\Program Files (x86)\Windows Multimedia Platform\
+</pre>
+
+    </details>
+</details></li>
+<li><p>
+What is the Twitter password revealed in the &ldquo;secrets.txt&rdquo; file?
+</p>
+<details id="orgac6ec23">
+<summary id="orgb635b28">
+<p>
+Answer
+</p>
+</summary>
+
+<figure id="org9b67465">
+<img src="media/screenshot/metasploitMeterpreterSecretFileContent.jpeg" alt="metasploitMeterpreterSecretFileContent.jpeg">
+
+</figure>
+
+<details id='org832c0f0' class='code' open>
+    <summary></summary>
+    <div class='gutter'>    <a href='#org832c0f0'>#</a>
+    <button title='Copy to clipboard' onclick='copyPreToClipbord(this)'>⎘</button>    </div>
+    <pre class="example">
+KDSvbsw3849!
+</pre>
+
+    </details>
+</details></li>
+<li><p>
+Where is the &ldquo;realsecret.txt&rdquo; file located?
+</p>
+<details id="orgde27010">
+<summary id="orge84c137">
+<p>
+Answer
+</p>
+</summary>
+
+
+<figure id="org1c736c3">
+<img src="media/screenshot/metasploitMeterpreterRealSecretFilePath.jpeg" alt="metasploitMeterpreterRealSecretFilePath.jpeg">
+
+</figure>
+
+<details id='orge5be10c' class='code' open>
+    <summary></summary>
+    <div class='gutter'>    <a href='#orge5be10c'>#</a>
+    <button title='Copy to clipboard' onclick='copyPreToClipbord(this)'>⎘</button>    </div>
+    <pre class="example">
+c:\inetpub\wwwroot\
+</pre>
+
+    </details>
+</details></li>
+<li><p>
+What is the real secret?
+</p>
+<details id="org418578d">
+<summary id="org4813417">
+<p>
+Answer
+</p>
+</summary>
+
+<figure id="org477c169">
+<img src="media/screenshot/metasploitMeterpreterRealSecretFileContent.jpeg" alt="metasploitMeterpreterRealSecretFileContent.jpeg">
+
+</figure>
+
+<details id='org5b26a22' class='code' open>
+    <summary></summary>
+    <div class='gutter'>    <a href='#org5b26a22'>#</a>
+    <button title='Copy to clipboard' onclick='copyPreToClipbord(this)'>⎘</button>    </div>
+    <pre class="example">
+The Flash is the fastest man alive
+</pre>
+
+    </details>
+</details></li>
+</ol>
 </div>
 </div>
-<div id="outline-container-orga478223" class="outline-2">
-<h2 id="orga478223"><span class="section-number-2">2.</span> TryHackMe Capture The Flag</h2>
+<div id="outline-container-org5a2a8b6" class="outline-2">
+<h2 id="org5a2a8b6"><span class="section-number-2">2.</span> Learn More</h2>
 <div class="outline-text-2" id="text-2">
 <ul class="org-ul">
-<li><a href="blog-pickle_rick-20221019162724.html#ID-8c637807-b8dc-4c74-aa19-fd26b96061a8">Pickle Rick</a></li>
+<li><a href="https://tryhackme.com/room/meterpreter">https://tryhackme.com/room/meterpreter</a></li>
 </ul>
 </div>
-</div>
-<div id="outline-container-org353d8bf" class="outline-2">
-<h2 id="org353d8bf"><span class="section-number-2">3.</span> Learn More</h2>
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="date">Created: 2022-10-22 Sat 01:46</p>
+<p class="date">Created: 2022-10-21 Fri 21:43</p>
 </div>
 </div>
 </body>
