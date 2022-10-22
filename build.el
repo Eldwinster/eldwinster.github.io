@@ -23,26 +23,6 @@
       org-html-head-include-default-style nil ;; Use our own styles
       org-html-head "<link rel=\"stylesheet\" href=\"https://cdn.simplecss.org/simple.min.css\" />")
 
-;; Define the publishing project
-(setq org-publish-project-alist
-      '(
-        ("org-notes"
-         :base-directory "./www"
-         :base-extension "html"
-         :publishing-directory "./public"
-         :recursive t
-         :publishing-function org-publish-attachment
-         :auto-preamble t)
-        ("org-static"
-         :base-directory "./www/media"
-         :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf"
-         :publishing-directory "./public/media"
-         :recursive t
-         :publishing-function org-publish-attachment
-         )
-        ("org" :components ("org-notes" "org-static"))
-        ))
-
 ;; Generate the site output
 (org-publish-all t)
 
